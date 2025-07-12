@@ -12,7 +12,7 @@ const dbclass=class Citizenform{
 
 //constructor for user data
 
-Citizenform(email,password,displayname){
+constructor(email,password,displayname){
   this.email=email;
   this.password=password;
   this.username=displayname;
