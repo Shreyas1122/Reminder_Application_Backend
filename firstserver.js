@@ -80,6 +80,7 @@ app.get("/initial_token_data", firstrouter.initial_token_data);
 //this is a request to active the server for  every time okay 
 app.get("/hello",(req,res,next)=>{
   console.log("Hello from the client side");
+    res.send("hello from the server");
 });
 
 function fun(){
