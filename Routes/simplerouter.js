@@ -113,7 +113,7 @@ const jwtmiddleware=(req,res,next)=>{
 
 const initial_token_data =(req,res,next)=>{
   const initialPayload = { tokenarray: [] };
-const token = jwt.sign(initialPayload, process.env.JWT_SECRET_KEY, { expiresIn: '1h' });
+const token = jwt.sign(initialPayload, process.env.JWT_SECRET_KEY);
 res.json({
   message: "New token created",
   token: token
