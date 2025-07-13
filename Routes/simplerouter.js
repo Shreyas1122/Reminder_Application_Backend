@@ -46,7 +46,9 @@ const jwt=require('jsonwebtoken');
 
       
   
-    });
+    },{
+  timezone: 'Asia/Kolkata'
+});
 
     const tokenData = {
     title: req.body.title || "Default Title",
