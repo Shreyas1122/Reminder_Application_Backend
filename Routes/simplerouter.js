@@ -27,7 +27,7 @@ const jwt=require('jsonwebtoken');
     const  month =req.body.month || '1'; // Default to every month if not provided
     const  dayOfWeek =req.body.dayOfWeek || '0'; // Default to every
  
- await  nodecron.schedule(`${seconds}  ${minutes}  ${hours}  ${datenumber} ${month} ${dayOfWeek}`, async () => {
+ nodecron.schedule(`${seconds}  ${minutes}  ${hours}  ${datenumber} ${month} ${dayOfWeek}`, async () => {
       console.log('Running scheduled job at midnight');
  apis.post("https://api-for-notification.onrender.com/postnotification",{
   title:req.body.title || "Default Title",
